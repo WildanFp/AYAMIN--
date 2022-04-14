@@ -44,6 +44,9 @@
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary" style="width:100%;">LOGIN</button>
+                        <div class="text-center">
+                                <a class="small" href="register.php">Create Account</a>
+                            </div>
                     </form>
                 </div>
             </div>
