@@ -65,18 +65,20 @@
                                 <th scope="col">PETERNAK</th>
                                 <th scope="col">STOK</th>
                                 <th scope="col">HARGA</th>
+                                <th scope="col">ALAMAT</th>
                                 <th scope="col">ACTION</th>
                             </tr>
                             </thead>
                             <tbody>
                         <?php
-                            $q = $link->query("SELECT username, nama, stok, harga FROM login WHERE stok > 0");
+                            $q = $link->query("SELECT username, nama, stok, harga, kota FROM login WHERE stok > 0");
                             while ($r = $q->fetch_assoc()) {
                                 echo "
                                 <tr>
                                     <td>".$r['nama']."</td>
                                     <td>".$r['stok']."</td>
                                     <td>".$r['harga']."</td>
+                                    <td>".$r['kota']."</td>
                                     <td><a class='btn btn-primary btn-sm' href='dashboard.php?u=".base64_encode($r['username'])."'><span class='oi oi-cart' title='graph' aria-hidden='true'></span> Pesan</a></td>
                                 </tr>
                                 ";
