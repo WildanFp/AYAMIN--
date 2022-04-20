@@ -33,33 +33,28 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
                             </div>
-                            <form class="user" action="prosesregister.php" method="POST">
+                            <form action="op.php?op=ins-user" method="post">
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <label for="role">Role</label>
-                                        <select id="role" name="role" class="form-control">
-                                            <option value="1">Admin</option>
-                                            <option value="2">Peternak</option>
-                                            <option value="3">Pengepul</option>
+                                        <label for="grup">Role</label>
+                                        <select name="grup" id="grup" class="form-control">
+                                            <option value="Peternak">Peternak</option>
+                                            <option value="Penjual">Penjual</option>
                                         </select>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <label for="cars">Id Role User</label>
-                                        <input type="text" class="form-control" name="id_role_user" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="username" class="form-control form-control-user" name="username" placeholder="Username" required>
+                                <input class="form-control" type="text" name="username" id="username" placeholder="Masukkan username">
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="password" class="form-control form-control-user" name="password" placeholder="Password" required>
+                                    <input class="form-control" type="password" name="password" id="password" placeholder="Masukkan password">
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="password" class="form-control form-control-user" name="password-check" placeholder="Repeat Password" required>
                                     </div>
                                 </div>
-                                <input type="submit" value="Register" class="btn btn-primary btn-user btn-block">
+                                <button class="btn btn-success" type="submit"><span class="oi oi-browser" title="browser" aria-hidden="true"></span> Save</button>
                             </form>
                             <hr>
                             <div class="text-center">
